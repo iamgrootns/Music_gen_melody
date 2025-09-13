@@ -1,17 +1,14 @@
-# Use an official Python runtime as the base image
-FROM python:3.11-slim
+# Use the official Runpod image with PyTorch and CUDA pre-installed
+FROM runpod/pytorch:2.2.0-py3.11-cuda12.1.1-devel-ubuntu22.04
 
-
-
-# Set the working directory in the container
+# Set the working directory
 WORKDIR /app
 
-# Copy the current directory contents into the container
+# Copy your requirements file and handler script
 COPY . /app
 
-# Install any needed packages specified in requirements.txt
+# Install the remaining packages
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Run the handler application
-# This command will be executed by Runpod to start your worker.
+# Command to run your handler
 CMD ["python", "handler.py"]
