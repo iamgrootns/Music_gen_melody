@@ -126,12 +126,12 @@ thinc==8.3.4
 threadpoolctl==3.6.0
 tokenizers==0.15.2
 tomlkit==0.13.3
-torch==2.1.0
-torchaudio==2.1.0
+#torch==2.1.0
+#torchaudio==2.1.0
 torchdata==0.7.0
 torchmetrics==1.8.1
 torchtext==0.16.0
-torchvision==0.16.0
+#torchvision==0.16.0
 tqdm==4.67.1
 transformers==4.36.2
 treetable==0.2.5
